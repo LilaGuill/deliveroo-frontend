@@ -11,6 +11,7 @@ const Meals = ({ meals }) => {
         </div>
       );
     }
+    return null;
   });
   return <div>{mealList}</div>;
 };
