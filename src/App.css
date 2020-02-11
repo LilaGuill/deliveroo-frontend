@@ -18,12 +18,13 @@ body {
   display: flex;
   align-items: center;
   height: 60px;
+  width: 100%;
   border-bottom: rgb(225, 225, 225) 1px solid;
   background-color: white;
 }
 .logo {
-  width: 160px;
-  height: 40px;
+  width: 140px;
+  height: 60px;
   object-fit: cover;
   object-position: center;
 }
@@ -83,8 +84,11 @@ p {
 .basket {
   margin-top: 20px;
   width: 350px;
-  max-height: 250px;
-  background-color: rgb(255, 255, 255);
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #808484;
 }
 /* card-items */
 .meal-card {
@@ -99,7 +103,7 @@ h2 {
   font-size: 24px;
   line-height: 30px;
   font-weight: bold;
-  margin: 20px;
+  margin: 30px 0 0 0;
 }
 
 .card {
@@ -113,7 +117,7 @@ h2 {
   cursor: pointer;
 }
 .card:hover {
-  box-shadow: 1px 1px 10px rgb(193, 193, 193, 0.5);
+  box-shadow: 0px 0px 20px rgb(193, 193, 193, 0.5);
 }
 h3 {
   font-size: 18px;
@@ -157,6 +161,90 @@ h3 {
   margin: 10px;
 }
 
+/* basket */
+.basket-total {
+  width: 90%;
+  min-height: 50px;
+  border-top: rgb(213, 213, 213) 1px solid;
+  border-bottom: rgb(216, 216, 216) 1px solid;
+}
+.basket-container {
+  display: flex;
+  width: 100%;
+  background-color: white;
+  min-height: 200px;
+  flex-direction: column;
+  align-items: center;
+}
+.main-basket {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper-basket {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  height: 40px;
+  color: #2e3333;
+  margin: 10px 0;
+  background-color: rgb(255, 255, 255);
+}
+.basket button {
+  width: 300px;
+  height: 50px;
+  margin: 10px auto;
+  border-radius: 4px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+.active {
+  background-color: #02cdbd;
+  color: white;
+}
+
+.inactive {
+  background-color: #bac3c3;
+  color: #868a8a;
+}
+.icon {
+  color: #02cdbd;
+  margin: 0 10px;
+  font-size: 12px;
+}
+
+.basket-title {
+  width: 210px;
+}
+.nothing {
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  text-align: center;
+}
+
+.subtotal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 40px;
+  color: #2e3333;
+}
+
+.total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  height: 70px;
+  color: #2e3333;
+  font-size: 19px;
+  line-height: 16px;
+}
 /* small device */
 
 @media (max-width: 800px) {
@@ -164,7 +252,11 @@ h3 {
   .header-container,
   .main-container,
   .header-container .title,
-  .meals-card {
+  .meal-card,
+  .card {
+    width: 100%;
+  }
+  .detail-card {
     width: 100%;
   }
   .header-container {

@@ -9,6 +9,8 @@ import "./App.css";
 function App() {
   const [meals, setMeals] = useState("");
   const [isloading, setIsLaoding] = useState(true);
+  const [basket, setBasket] = useState([]);
+  const [total, setTotal] = useState(0);
 
   const fetchData = async () => {
     const response = await Axios.get(
@@ -22,7 +24,7 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <>
       <ToolBar />
 
       {isloading === true ? (
@@ -35,12 +37,22 @@ function App() {
             description={meals.restaurant.description}
           />
           <div className="main-container">
-            <Meals meals={meals.categories}></Meals>
-            <Basket />
+            <Meals
+              meals={meals.categories}
+              setBasket={setBasket}
+              basket={basket}
+            />
+
+            <Basket
+              basket={basket}
+              setBasket={setBasket}
+              total={total}
+              setTotal={setTotal}
+            />
           </div>
         </>
       )}
-    </div>
+    </>
   );
 }
 
