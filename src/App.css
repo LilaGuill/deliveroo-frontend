@@ -73,6 +73,7 @@ p {
 .title p:hover {
   text-decoration: underline;
 }
+
 /* main */
 .main-container {
   width: 1200px;
@@ -80,6 +81,15 @@ p {
   display: flex;
   min-height: 600px;
   justify-content: space-around;
+}
+
+.loader-container {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  min-height: 600px;
+  justify-content: space-around;
+  align-items: center;
 }
 .basket {
   margin-top: 20px;

@@ -4,6 +4,7 @@ import ToolBar from "./components/Toolbar";
 import Header from "./components/Header";
 import Meals from "./components/Meals";
 import Basket from "./components/Basket";
+import Loading from "./components/Loading";
 import "./App.css";
 
 function App() {
@@ -28,7 +29,9 @@ function App() {
       <ToolBar />
 
       {isloading === true ? (
-        <div>is loading</div>
+        <div className="loader-container">
+          <Loading />
+        </div>
       ) : (
         <>
           <Header
