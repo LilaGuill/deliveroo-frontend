@@ -33,7 +33,7 @@ Clone this repository :
 
 ```
 git clone https://github.com/LilaGuill/deliveroo-frontend.git
-cd react-todo-list
+cd deliveroo-frontend
 ```
 
 Install packages :
