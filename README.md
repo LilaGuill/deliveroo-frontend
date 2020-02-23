@@ -17,7 +17,7 @@
 
 **Functionalities**
 
-- Get meals from api
+- Get meals from API
 - Add meal to the Basket
 - Increment quantity into the basket
 - Decrement quantity into the basket
@@ -50,7 +50,8 @@ npm start
 
 ## Client
 
-- HTTP request with axios (Get)
+- React
+- HTTP request with axios (get)
 - Hooks (useState, useEffect)
 
 ## Server
